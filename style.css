@@ -1,0 +1,409 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    background-image: linear-gradient(
+        to right,
+        #F8C8DC,
+        #E18AAA
+        );
+}
+
+.card{
+    width: 640px;
+    height: 480px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+.card:hover
+{
+    transform: rotate(-5deg);
+}
+.card:hover .outside
+{
+    transform: rotateY(-130deg);
+}
+.outside, 
+.inside
+{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50.1%;
+    
+}
+
+.inside
+{
+    background: linear-gradient(to right, #e0e0e0,
+    white 30%);
+    line-height: 3;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+
+}
+.outside
+{
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+
+}
+
+.front, 
+.back
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+
+}
+.front
+{
+    background-color: white;
+    
+}
+.back
+{
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e0e0e0,
+     white 30% );
+
+}
+
+.cake
+{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+
+}
+.top-layer, 
+.middle-layer,
+.bottom-layer
+{
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+
+}
+
+.middle-layer
+{
+    transform: scale(0.85);
+    top: 6px;
+}
+.top-layer
+{
+    transform: scale(0.7);
+    top: 26px;
+}
+.candle
+{
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+    );
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 202px;
+}
+.candle::before
+{
+    content:"" ;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius:  50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+.outside p
+{
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: black;
+     
+
+}
+
+@keyframes reveal 
+{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.button-container {
+    text-align:center;
+    display: block;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FE3699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contents 
+{
+    
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    text-align: center;
+    display: none;
+    
+
+
+}
+
+.button-container2 {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
+    display: none;
+    text-align: right;
+}
+
+.button2 {
+
+    padding: 5px 10px;
+    font-size: 8px;
+    background-color: #FE3699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.button3 {
+
+    padding: 5px 10px;
+    font-size: 8px;
+    background-color: #FE3699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+}
+.button-container3 {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
+    display: none;
+    text-align: right;
+}
+
+.image-one
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 30%;
+    left: 5%;
+    height: 150px;
+    width: 200px;
+}
+.image-two
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 30%;
+    right: 5%;
+    height: 150px;
+    width: 200px;
+}
+
+.happy-birthday {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+.title
+{
+    position: absolute;
+    background-color: #EFCFD4;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px 10px;   
+    width: fit-content;
+    height: fit-content;
+    align-content: center;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+}
+.tambahan
+{
+    position: absolute;
+    top: 20%;
+}
+.textp1
+{
+    position: absolute;
+    top: 54%;
+    left: 8%;
+}
+
+
+.textp2
+{
+    position: absolute;
+    top: 54%;
+    right: 2%;
+    font-size: 15px;
+}
+
+.image-three
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 30%;
+    right: 40%;
+    left: 40%;
+    height: 150px;
+    width: 200px;
+}
+
+.textp3
+{
+    position: absolute;
+    top: 54%;
+    left: 36%;
+    font-size: 15px;
+}
+
+.image-four
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 70%;
+    right: 40%;
+    left: 40%;
+    height: 150px;
+    width: 200px;
+}
+.image-five
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 70%;
+    left: 5%;
+    height: 150px;
+    width: 200px;
+}
+.image-six
+{
+    border: #FE3699 5px solid;
+    position: absolute;
+    align-content: center;
+    top: 70%;
+    right: 5%;
+    height: 150px;
+    width: 200px;
+}
+
+.textp4
+{
+    position: absolute;
+    top: 94%;
+    left: 36%;
+    font-size: 15px;
+}
+
+.textp5
+{
+    position: absolute;
+    top: 94%;
+    left: 2%;
+    font-size: 15px;
+}
+
+.textp6
+{
+    width: 260px;
+    position: absolute;
+    top: 94%;
+    right: 2%;
+    font-size: 15px;
+
+}
+.video
+{
+    position: absolute;
+    display: none;
+    background-color: #FE3699;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    text-align: center;
+}

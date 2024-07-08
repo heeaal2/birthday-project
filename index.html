@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Birthday Card</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Poppins', sans-serif;
+            }
+            .card {
+                display: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="button-container">
+            <button class="button" onclick="showSecondButton()">Click for a surprise!</button>
+        </div>
+        
+        <div class="button-container2">
+            <footer>
+                <button class="button2" onclick="showThirdButton()">Again</button>
+            </footer>           
+        </div>
+
+        <div class="contents">
+            <h1 class = "title">
+                You Have Done So Much Things This Year!!
+            </h1>
+            <p class="tambahan">
+                Here is some of them:
+            </p>
+            <p class="textp1">
+                We survived LDR!
+            </p>
+            <p class="textp2">
+                You started taking film photography!
+            </p>
+            <p class="textp3">
+                We went to our dream concert together!
+            </p>
+            <p class="textp4">
+                You successfully made your own bagels!
+            <p>
+             <p class="textp5">
+                You went umroh and travel by yourself!!
+            </p>
+            <p class="textp6">
+                THE HIGLIGHT OF THIS YEAR: 
+                WE GOT APPROVED FOR MARRIAGE!!!
+            </p>
+
+            <img src="IMG_8445.jpg" alt="My Image" class="image-one">
+            <img src="IMG_1346.jpg" alt="My Image" class="image-two">
+            <img src="IMG_9970.jpg" alt="My Image" class="image-three">
+            <img src="IMG_3900.jpg" alt="My Image" class="image-four">
+            <img src="nt16_2024-05-09_220905.258.jpg" alt="My Image" class="image-five">
+            <img src="IMG_3801.jpg" alt="My Image" class="image-six">
+        </div>
+
+        <div class="button-container3">
+            <footer>
+                <button class="button3" onclick="showCardWithConfetti()">Again</button>
+            </footer>           
+        </div>
+
+        <div class="video">
+            <video src="wishes.mov" controls width="640" height="480"></video>
+        </div>
+
+        <div class="card">
+            <div class="outside"> 
+                <div class="front">
+                    <p class="happy-birthday">Happy Birthday</p>
+                    <p class="happy-birthday">sayangku!!!</p>
+                    <div class="cake">
+                        <div class="top-layer"></div>
+                        <div class="middle-layer"></div>
+                        <div class="bottom-layer"></div>
+                        <div class="candle"></div>
+                    </div>
+                </div>
+                <div class="back"></div>
+            </div>
+            <div class="inside">
+                <p>Wishing you a very happy birthday sayaang!! here is for a good long healthy life, happiness, and more more happy moments together!!</p>
+                <p>I love you soo much. Always, and will always do</p>
+                <h1>&#128536; &#128144; &#127881; &#127881; &#129395;</h1>
+            </div>
+        </div>
+
+        <script>
+            function showSecondButton() {
+                confetti({
+                    particleCount: 1000,
+                    spread: 200,
+                    origin: { y: 0.5 }
+                });
+                setTimeout(function() {
+                    document.querySelector('.button-container').style.display = 'none';
+                    document.querySelector('.button-container2').style.display = 'block';
+                    document.querySelector('.contents').style.display = 'block';
+                    document.querySelector('.image-one').style.animation = 'reveal 1s ease-in-out forwards';
+                    document.querySelector('.textp1').style.animation = 'reveal 1s ease-in-out forwards';
+                    document.querySelector('.image-three').style.animation = 'reveal 3s ease-in-out forwards';
+                    document.querySelector('.textp3').style.animation = 'reveal 3s ease-in-out forwards';
+                    document.querySelector('.image-two').style.animation = 'reveal 5s ease-in-out forwards';
+                    document.querySelector('.textp2').style.animation = 'reveal 5s ease-in-out forwards';
+                    document.querySelector('.image-five').style.animation = 'reveal 7s ease-in-out forwards';
+                    document.querySelector('.textp5').style.animation = 'reveal 7s ease-in-out forwards';
+                    document.querySelector('.image-four').style.animation = 'reveal 9s ease-in-out forwards';
+                    document.querySelector('.textp4').style.animation = 'reveal 9s ease-in-out forwards';
+                    document.querySelector('.image-six').style.animation = 'reveal 11s ease-in-out forwards';
+                    document.querySelector('.textp6').style.animation = 'reveal 11s ease-in-out forwards';
+                }, 2000);
+            }
+
+            function showThirdButton() {
+                confetti({
+                    particleCount: 1000,
+                    spread: 200,
+                    origin: { y: 0.5 }
+                });
+                setTimeout(function() {
+                    document.querySelector('.contents').style.display = 'none';
+                    document.querySelector('.button-container2').style.display = 'none';
+                    document.querySelector('.video').style.display = 'block';
+                    document.querySelector('.button-container3').style.display = 'block';
+                }, 2000);
+            }
+
+            function showCardWithConfetti()
+            {
+                confetti({
+                    particleCount: 1000,
+                    spread: 200,
+                    origin: { y: 0.5 }
+                });
+                setTimeout(function() {
+                    document.querySelector('.video').style.display = 'none';
+                    document.querySelector('.button-container3').style.display = 'none';
+                    document.querySelector('.card').style.display = 'block';
+                }, 2000);
+                
+            }
+        </script>
+    </body>
+</html>
